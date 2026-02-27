@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+
+  --color-brand-primary: #6C38CC;
+  --color-brand-accent: #FF6B35;
+  --color-brand-bg: #0D0A1A;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-fade-in: fade-in 0.8s ease-out;
+}
+
+@layer base {
+  body {
+    @apply font-poppins bg-brand-bg text-white antialiased;
+  }
+}
